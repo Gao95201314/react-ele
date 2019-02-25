@@ -1,0 +1,49 @@
+@import '@/styles/common/px2rem.scss';
+.tab-bar {
+  display: flex;
+  width: 100%;
+  height: px2rem(50);
+  z-index: 100;
+  background: #fff;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:px2rem(1);
+    background: #ededed;
+    transform: scaleY(0.5);
+  }
+
+  &__item {
+    flex: 1;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: px2rem(12);
+      margin-top: px2rem(2);
+      color: #797d82;
+      text-decoration: none;
+      padding-top: px2rem(3);
+
+      span {
+        margin-top: px2rem(2);
+      }
+
+      i {
+        font-size: px2rem(26);
+      }
+
+      &.active {
+        color: #ff5f16;
+      }
+    }
+
+  }
+}
